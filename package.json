@@ -1,0 +1,40 @@
+{
+  "name": "svelte-glide",
+  "version": "1.0.0",
+  "description": "Glide.js powered carousel for Svelte",
+  "svelte": "src/index.html",
+  "module": "index.mjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "rollup": "^0.57.1",
+    "rollup-plugin-svelte": "^4.1.0",
+    "svelte": "^1.60.0"
+  },
+  "keywords": [
+    "carousel",
+    "svelte",
+    "glide"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adonespitogo/svelte-glide.git"
+  },
+  "author": "Adones B. Pitogo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adonespitogo/svelte-glide/issues"
+  },
+  "homepage": "https://github.com/adonespitogo/svelte-glide#readme",
+  "files": [
+    "src",
+    "index.mjs",
+    "index.js"
+  ],
+  "dependencies": {
+    "@glidejs/glide": "^3.0.4"
+  }
+}

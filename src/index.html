@@ -1,0 +1,35 @@
+<div class="glide">
+  <div data-glide-el="track" class="glide__track">
+    <ul ref:list class="glide__slides">
+      <li class="glide__slide"></li>
+      <li class="glide__slide"></li>
+      <li class="glide__slide"></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+import Glide from '@glidejs/glide';
+
+export default {
+  data() {
+    return {
+      target: '.glide',
+      items: []
+    };
+  },
+  oncreate({changed, current, previous}) {
+    this.get().items.forEach((url, i) => {
+      const li = document.createElement('li');
+      const img = document.createElement('img');
+      img.src = url;
+      img.width = '100%';
+      li.addClass('glide__slide');
+      this.refs.list.appendChild(li);
+      li.appendChild(img);
+    }); 
+    this.glide = new Glide(this.get().target).mount();
+  }
+}
+
+<script>
